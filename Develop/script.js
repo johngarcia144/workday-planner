@@ -6,10 +6,8 @@ $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
   for(i = 9; i < 18; i++) {
     // variable for current hour
     var currentHour = parseInt(moment().format('HH')); 
-    var rowHour = $("#hour-"+i);
-    console.log(i, currentHour)
-    console.log(rowHour)
-
+    var rowHour = $("#hour-" + i);
+  
     if (currentHour === i) {
       $("#hour-" + i).addClass("present");
     }
