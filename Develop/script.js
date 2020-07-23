@@ -1,30 +1,22 @@
-
-$("#currentDay").append();
-
-function currentDate() { 
-$("#currentDay").html(moment().format('MMMM Do YYYY, h:mm a'));
-  
-} setInterval(currentDate, 1000);
-  // Variables for save button, 
-  //variable to current hour
-  // variable current hourint
-
-
-  // data attributes  for each hour so a color can be assigned
-  // $("#9Row").attr("data-time", moment("9:00 am", "h:mm a").format("HH"));
-// drilling into class, 
-// start jqueary
-
 // date and time in header
- 
+moment(Date);
+$("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
-// for loop, changing color to each row, adding in above attributes for each input line reflecting current hour
-  // if moment hour = #hour, then row = .present (orange)
-  // if moment hour = past, then row = .past (white)
-  // if moment hour = future, then row = .future (gren)
+// for loop, changing color to each row
+  for(i = 0; i < 17, i++) {
+    // variable for current hour
+    var currentHour = moment().format('HH'); 
+    var rowHour = $("#hour-i");
 
+    if (currentHour === rowHour) {
+      $("#hour-"i).addClass("present");
+    }
 
-// on click for save button that will save data
+    if (currentHour > rowHour) {
+      $("#hour-"i).addClass("past");
+    }
 
-
-
+    if (currentHour < rowHour) {
+      $("#hour-"i).addClass("future");
+    }
+  }
