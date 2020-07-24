@@ -28,15 +28,10 @@ $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm:ss a'));
 
   }
 
-  // click function to save textarea data to local storage
+// click function to save textarea data to local storage
 
-  $(".saveBtn").on("click", function () {
-    ​
-      var id = $(this).attr("data-id");
-      
-      var value = $("#" + id).val();
-    ​
-      localStorage.setItem(id, value);
-    ​
-    });
-    
+$(".saveBtn").on("click", function () {
+    var id = $(this).attr("data-id");
+    var value = $("#" + id).val();
+    localStorage.setItem(id, value);
+  });
