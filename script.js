@@ -21,3 +21,11 @@ $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
       $("#hour-" + i).addClass("future");
     }
   }
+
+  // button to save data and retrieve it
+
+  $(".saveBtn").on("click", function() {
+    $('#textarea').html("");
+    localStorage.content = $('#textarea').html();
+    $('#textarea').html(localStorage.content);
+  });
